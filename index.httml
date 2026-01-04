@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio IA – Écriture multimédia</title>
 
-  <!-- favicon -->
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="icon" type="image/png" href="logo.png" />
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -166,71 +165,65 @@
       box-shadow: 0 12px 40px rgba(255, 79, 163, 0.4);
     }
 
-    /* Production 2 grid */
-    .video-grid-3x2{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      grid-template-rows:repeat(3,1fr);
-      gap:20px;
-      margin-bottom:40px;
-    }
-    .video-grid-3x2 img{
-      width:100%;
-      height:300px;
-      object-fit:cover;
-      border-radius:16px;
-      box-shadow:0 12px 40px rgba(0,0,0,0.15);
-      display:block;
+    .video-grid-3x2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
     }
 
+    .video-grid-3x2 img {
+  width: 100%;
+  height: auto;          /* plus de hauteur fixe */
+  object-fit: contain;   /* pas de recadrage */
+  background: #fff;      /* joli fond si l'image ne remplit pas */
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+
     .video-wrapper { margin-top: 20px; margin-bottom: 40px; }
+
     .video {
       width: 100%;
       border-radius: 20px;
       box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-      background:#000;
+      background: #000;
     }
 
     .section-subtitle { font-size: 1.5rem; font-weight: 600; margin-bottom: 16px; color: #7a4a2b; }
+
     .prompt-image { width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
 
-    /* Galerie prod 3 */
-    #prod3-galerie .gal-block{ margin-top:28px; padding-top:18px; border-top:1px solid rgba(255,79,163,0.15); }
-    #prod3-galerie .gal-title{ font-size:1.35rem; font-weight:800; color:#7a4a2b; margin-bottom:14px; }
-    #prod3-galerie .two-col, #prod3-galerie .three-col{ display:grid; gap:18px; }
-    @media (min-width:768px){
-      #prod3-galerie .two-col{ grid-template-columns:1fr 1fr; }
-      #prod3-galerie .three-col{ grid-template-columns:1fr 1fr 1fr; }
-    }
-    #prod3-galerie .img-card{
-      background:#fff;
-      border-radius:18px;
-      padding:12px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    }
     #prod3-galerie .img-card img{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-      border-radius:14px;
-      display:block;
-    }
-    #prod3-galerie .img-card.single img{ height:420px; }
-    #prod3-galerie figcaption{ margin-top:10px; font-weight:600; color:#7a4a2b; }
+  width: 100%;
+  height: auto;          /* plus de hauteur fixe */
+  object-fit: contain;   /* plus de recadrage */
+  background: #fff;      /* propre si bandes */
+  border-radius: 14px;
+  display: block;
+}
 
-    .bullets { list-style:none; padding:0; }
+#prod3-galerie .img-card.single img{
+  max-height: 720px;     /* limite propre, sans couper */
+  margin: 0 auto;
+}
+
+
+    .bullets { list-style: none; padding: 0; }
     .bullets li { padding: 8px 0; padding-left: 24px; position: relative; }
-    .bullets li:before { content:"•"; color:#ff4fa3; font-size:24px; position:absolute; left:0; top:4px; }
+    .bullets li:before { content: "•"; color: #ff4fa3; font-size: 24px; position: absolute; left: 0; top: 4px; }
 
     .closing-quote {
-      text-align:center;
-      font-size:1.2rem;
-      font-weight:500;
-      font-style:italic;
-      color:#a67c52;
-      padding:50px 20px 30px;
-      max-width:800px;
-      margin:0 auto;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
+      font-style: italic;
+      color: #a67c52;
+      padding: 50px 20px 30px;
+      max-width: 800px;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -272,7 +265,7 @@
     <div class="text-center max-w-4xl">
       <div class="mb-8 flex justify-center">
         <img
-          src="images/logo.png"
+          src="logo.png"
           alt="Logo"
           class="w-64 h-64 md:w-80 md:h-80 rounded-3xl shadow-2xl object-cover"
           style="box-shadow: 0 20px 60px rgba(255, 79, 163, 0.3);"
@@ -395,13 +388,15 @@
         <h3 class="text-3xl font-bold text-[#7a4a2b] mb-8">Production 1 : Défi de génération d'image</h3>
 
         <div class="mb-8 flex justify-center gap-6 flex-wrap">
-          <img src="images/fillerousse.png" alt="Fille rousse 1" class="rounded-xl shadow-lg object-cover" style="width: 45%; min-width: 300px; height: 400px;" />
-          <img src="images/fillerousse2.png" alt="Fille rousse 2" class="rounded-xl shadow-lg object-cover" style="width: 45%; min-width: 300px; height: 400px;" />
+          <img src="fillerousse.png" alt="Fille rousse 1" class="rounded-xl shadow-lg object-cover" style="width: 45%; min-width: 300px; height: 400px;" />
+          <img src="fillerousse2.png" alt="Fille rousse 2" class="rounded-xl shadow-lg object-cover" style="width: 45%; min-width: 300px; height: 400px;" />
         </div>
 
         <div class="mb-8">
           <h4 class="font-semibold mb-3 text-xl text-[#ff4fa3]">Intention</h4>
-          <p class="leading-relaxed text-lg">L'objectif de ce défi était de reproduire une image de référence fournie par l'enseignant en utilisant un outil de génération d'images par IA, en respectant à la fois le style, les couleurs, la composition et le cadrage.</p>
+          <p class="leading-relaxed text-lg">
+            L'objectif de ce défi était de reproduire une image de référence fournie par l'enseignant en utilisant un outil de génération d'images par IA, en respectant à la fois le style, les couleurs, la composition et le cadrage.
+          </p>
         </div>
 
         <div class="mb-8">
@@ -413,8 +408,12 @@
 
         <div class="mb-8">
           <h4 class="font-semibold mb-4 text-xl text-[#ff4fa3]">Analyse critique</h4>
-          <p class="leading-relaxed text-lg mb-4">La principale difficulté a été d'obtenir un rendu proche de l'image de référence. Malgré un prompt précis, l'IA interprète le style de manière libre et produit une image différente, surtout au niveau du rendu et des détails.</p>
-          <p class="leading-relaxed text-lg">Cette expérience m'a montré l'importance de la précision du prompt et des tests successifs. Elle confirme aussi que l'IA est plus adaptée à la création de variations qu'à la reproduction fidèle d'un style précis.</p>
+          <p class="leading-relaxed text-lg mb-4">
+            La principale difficulté a été d'obtenir un rendu proche de l'image de référence. Malgré un prompt précis, l'IA interprète le style de manière libre et produit une image différente, surtout au niveau du rendu et des détails.
+          </p>
+          <p class="leading-relaxed text-lg">
+            Cette expérience m'a montré l'importance de la précision du prompt et des tests successifs. Elle confirme aussi que l'IA est plus adaptée à la création de variations qu'à la reproduction fidèle d'un style précis.
+          </p>
         </div>
       </div>
 
@@ -423,18 +422,18 @@
         <p class="text-sm uppercase tracking-wide mb-12 opacity-60">IA générative — images vers vidéo</p>
 
         <div class="video-grid-3x2">
-          <img src="images/rue.png" alt="Rue" />
-          <img src="images/porte.png" alt="Porte" />
-          <img src="images/jambe.png" alt="Jambe" />
-          <img src="images/corps.png" alt="Corps" />
-          <img src="images/voiture.png" alt="Voiture" />
-          <img src="images/pas.png" alt="Pas" />
+          <img src="rue.png" alt="Rue" />
+          <img src="porte.png" alt="Porte" />
+          <img src="jambe.png" alt="Jambe" />
+          <img src="corps.png" alt="Corps" />
+          <img src="voiture.png" alt="Voiture" />
+          <img src="pas.png" alt="Pas" />
         </div>
 
         <div class="video-wrapper">
           <h4 class="section-subtitle">Vidéo finale</h4>
           <video class="video" controls playsinline preload="metadata" muted>
-            <source src="images/video.mp4" type="video/mp4" />
+            <source src="video.mp4" type="video/mp4" />
             Ton navigateur ne supporte pas la vidéo.
           </video>
         </div>
@@ -448,8 +447,9 @@
           <p class="text-lg leading-relaxed mb-6">
             Une fois les images obtenues, j'ai utilisé Google Studio IA pour générer des vidéos courtes, puis j'ai assemblé et monté la vidéo finale sur Canva.
           </p>
+
           <h5 class="font-semibold mb-3 text-[#ff4fa3]">Prompt utilisé</h5>
-          <img src="images/promptvideo.png" alt="Prompt vidéo" class="prompt-image" />
+          <img src="promptvideo.png" alt="Prompt vidéo" class="prompt-image" />
         </div>
 
         <div class="card mt-8">
@@ -497,9 +497,7 @@
         <div class="mb-8 grid md:grid-cols-2 gap-8">
           <div>
             <h4 class="font-semibold mb-3 text-xl text-[#ff4fa3]">Outils utilisés</h4>
-            <p class="leading-relaxed text-lg">
-              Gemini IA, Chatgpt, Google Studio IA et CANVA.
-            </p>
+            <p class="leading-relaxed text-lg">Gemini IA, Chatgpt, Google Studio IA et CANVA.</p>
           </div>
           <div>
             <h4 class="font-semibold mb-3 text-xl text-[#ff4fa3]">Lien avec mon futur métier</h4>
@@ -522,11 +520,11 @@
           <h4 class="gal-title">Série 1 — Pose sheet (avant / après)</h4>
           <div class="two-col">
             <figure class="img-card">
-              <img src="images/dupliquer1.jpeg" alt="Avant pose sheet" />
+              <img src="dupliquer1.jpeg" alt="Avant pose sheet" />
               <figcaption>Avant</figcaption>
             </figure>
             <figure class="img-card">
-              <img src="images/dupliquer2.jpeg" alt="Après pose sheet" />
+              <img src="dupliquer2.jpeg" alt="Après pose sheet" />
               <figcaption>Après</figcaption>
             </figure>
           </div>
@@ -540,7 +538,7 @@
         <div class="gal-block">
           <h4 class="gal-title">Série 2 — Portrait "artist"</h4>
           <figure class="img-card single">
-            <img src="images/artisan.jpeg" alt="Résultat portrait artist" />
+            <img src="artisan.jpeg" alt="Résultat portrait artist" />
             <figcaption>Résultat</figcaption>
           </figure>
 
@@ -563,15 +561,15 @@
 
           <div class="three-col">
             <figure class="img-card">
-              <img src="images/gris.jpeg" alt="Support canette" />
+              <img src="gris.jpeg" alt="Support canette" />
               <figcaption>Image 1 — Support canette</figcaption>
             </figure>
             <figure class="img-card">
-              <img src="images/fillecannette.jpeg" alt="Design canette" />
+              <img src="fillecannette.jpeg" alt="Design canette" />
               <figcaption>Image 2 — Design</figcaption>
             </figure>
             <figure class="img-card">
-              <img src="images/finalecannette.jpeg" alt="Résultat final canette" />
+              <img src="finalecannette.jpeg" alt="Résultat final canette" />
               <figcaption>Résultat final</figcaption>
             </figure>
           </div>
@@ -598,10 +596,10 @@
           <h4 class="gal-title">Images pour réseaux sociaux</h4>
           <div class="two-col">
             <figure class="img-card">
-              <img src="images/blanc.png" alt="Visuel blanc" />
+              <img src="blanc.png" alt="Visuel blanc" />
             </figure>
             <figure class="img-card">
-              <img src="images/work.png" alt="Visuel work" />
+              <img src="work.png" alt="Visuel work" />
             </figure>
           </div>
 
@@ -688,6 +686,26 @@
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+    // Lightbox (clic pour agrandir)
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+
+document.querySelectorAll('img').forEach(img => {
+  img.classList.add('zoomable');
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || 'Image';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+  });
+});
+
+lightbox.addEventListener('click', () => {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightboxImg.src = '';
+});
+
   </script>
 </body>
 </html>
